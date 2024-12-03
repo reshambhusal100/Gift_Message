@@ -3,44 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Note</title>
+    <title>You Are Hacked!</title>
     <style>
         body {
+            background-color: black;
+            color: lime;
+            font-family: "Courier New", Courier, monospace;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #ffebcd;
-            font-family: 'Arial', sans-serif;
             margin: 0;
-        }
-        .card {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             text-align: center;
         }
         h1 {
-            color: #ff6f61;
-            font-size: 3rem;
+            font-size: 4rem;
+            animation: glitch 1s infinite;
         }
         p {
-            font-size: 1.2rem;
-            color: #333;
+            font-size: 1.5rem;
+            margin-top: 20px;
         }
-        .heart {
-            color: red;
-            font-size: 2rem;
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-5px, 5px); }
+            40% { transform: translate(5px, -5px); }
+            60% { transform: translate(-5px, -5px); }
+            80% { transform: translate(5px, 5px); }
+            100% { transform: translate(0); }
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: darkred;
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>For My Love</h1>
-        <p>You make my life brighter and fill my heart with happiness ❤️</p>
-        <p>Every day with you is a blessing!</p>
-        <p class="heart">Love you always! 💖</p>
-    </div>
+    <h1>You Are Hacked!</h1>
+    <p>Just kidding! You’re safe 😄</p>
+    <button class="btn" onclick="alert('Gotcha!')">Click here to escape!</button>
 </body>
 </html>
